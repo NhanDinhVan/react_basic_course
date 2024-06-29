@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react_basic_course/static/css/main.f855e6bc.css",
+    "main.js": "/react_basic_course/static/js/main.a0f6d340.js",
+    "static/js/453.55db0f81.chunk.js": "/react_basic_course/static/js/453.55db0f81.chunk.js",
+    "static/media/logo.svg": "/react_basic_course/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/react_basic_course/index.html",
+    "main.f855e6bc.css.map": "/react_basic_course/static/css/main.f855e6bc.css.map",
+    "main.a0f6d340.js.map": "/react_basic_course/static/js/main.a0f6d340.js.map",
+    "453.55db0f81.chunk.js.map": "/react_basic_course/static/js/453.55db0f81.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.a0f6d340.js"
+  ]
+}

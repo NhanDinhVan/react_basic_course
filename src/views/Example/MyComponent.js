@@ -17,7 +17,7 @@ class MyComponent extends React.Component {
     }
     onClickMe = (event) => {
         event.preventDefault()
-        alert(this.state)
+        alert("First name: " + this.state.firstName + "\nLast name: " + this.state.lastName)
     }
 
     render() {
@@ -36,10 +36,14 @@ class MyComponent extends React.Component {
                 <input type="button" value="Submit"
                     onClick={(event) => this.onClickMe(event)}></input>
             </form>
-            <ChildComponent name={'child one'}></ChildComponent>
-            <ChildComponent name={'child two'}></ChildComponent>
-            <ChildComponent name={'child three'}></ChildComponent>
-
+            <ChildComponent
+                name={'nhan'}
+                age={'25'}
+            ></ChildComponent>
+            <ChildComponent
+                name={'dinh'}
+                age={'30'}
+            ></ChildComponent>
         </>
     }
 }

@@ -5,7 +5,7 @@ import ChildComponent from './Example/ChildComponent';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App col-12">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 

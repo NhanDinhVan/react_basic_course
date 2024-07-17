@@ -23,11 +23,23 @@ class ChildComponent extends React.Component {
     render() {
         // let name = this.props.name
         // let age = this.props.age
-        const { name, age } = this.props;
+        const { firstName, lastName, classList } = this.props;
         console.log(">>> Check props: " + this.props)
         return <>
+            <div className="my-3">
+                Full Name: {firstName + " " + lastName}
+            </div>
             <div>
-                Child Component: {name + "-" + age}
+                <h3 className="text-warning my-3">Your class:</h3>
+                {
+                    classList.map((item, classList) => {
+                        return (
+                            <div key={item.className}>
+                                {item.className} - {item.teacherName}
+                            </div>
+                        )
+                    })
+                }
             </div>
         </>
     }

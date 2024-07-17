@@ -3,7 +3,11 @@ import ChildComponent from "./ChildComponent";
 class MyComponent extends React.Component {
     state = {
         firstName: "",
-        lastName: ""
+        lastName: "",
+        classList: [
+            { className: "Math", teacherName: "Tran Van Dai" },
+            { className: "English", teacherName: "Nguyen Hong Viet" }
+        ]
     }
     onChangeFirstName = (event) => {
         this.setState({
@@ -23,27 +27,26 @@ class MyComponent extends React.Component {
     render() {
         return <>
             <form >
-                <label>First name: {this.state.firstName}</label><br />
+                <label>First name:</label><br />
                 <input type="text"
                     value={this.state.firstName}
                     onChange={(event) => this.onChangeFirstName(event)}
                 ></input><br />
-                <label>Last name: {this.state.lastName}</label><br />
+                <label>Last name:</label><br />
                 <input type="text"
                     value={this.state.lastName}
                     onChange={(event) => this.onChangeLastName(event)}
                 ></input><br /><br />
                 <input type="button" value="Submit"
+                    className="d-flex justify-content-center align-center"
                     onClick={(event) => this.onClickMe(event)}></input>
             </form>
             <ChildComponent
-                name={'nhan'}
-                age={'25'}
+                firstName={this.state.firstName}
+                lastName={this.state.lastName}
+                classList={this.state.classList}
             ></ChildComponent>
-            <ChildComponent
-                name={'dinh'}
-                age={'30'}
-            ></ChildComponent>
+
         </>
     }
 }

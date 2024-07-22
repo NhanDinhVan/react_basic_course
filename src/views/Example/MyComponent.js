@@ -8,30 +8,15 @@ class MyComponent extends React.Component {
             { className: "English", teacherName: "Nguyen Hong Viet" }
         ]
     }
-    onChangeFirstName = (event) => {
-        this.setState({
-            firstName: event.target.value
-        })
-    }
-    onChangeLastName = (event) => {
-        this.setState({
-            lastName: event.target.value
-        })
-    }
-    onClickMe = (event) => {
-        event.preventDefault()
-        alert("First name: " + this.state.firstName + "\nLast name: " + this.state.lastName)
-    }
-
     render() {
         return <>
 
-            <div className="col-12 d-flex ">
-                <div className="col-6 d-flex">
+            <div className="col-12 d-flex flex-wrap">
+                <div className="col-12 d-flex col-md-8">
                     <AddComponent></AddComponent>
                 </div>
 
-                <div className="col-6">
+                <div className="col-12 col-md-4">
                     <ChildComponent
                         classList={this.state.classList}
                     ></ChildComponent>

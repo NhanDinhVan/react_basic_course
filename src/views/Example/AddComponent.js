@@ -20,22 +20,22 @@ class AddComponent extends React.Component {
     }
     render() {
         return (
-            <div className="col-12">
-                <form className="d-flex justify-content-center flex-wrap col-12 m-2">
-                    <div className="col-6">
+            <div className="col-12 p-5">
+                <form className="d-flex justify-content-center flex-wrap col-12">
+                    <div className="col-6 col-md-5">
                         <label>First name:</label><br />
                         <input type="text"
                             value={this.state.className}
                             onChange={(event) => this.onChangeClassName(event)}
-                            className="col-12"
+                            className="col-10 col-md-12"
                         ></input><br />
                     </div>
-                    <div className="col-6">
+                    <div className="col-6 col-md-5">
                         <label>Last name:</label><br />
                         <input type="text"
                             value={this.state.teacherName}
                             onChange={(event) => this.onChangeTeacherName(event)}
-                            className="col-12"
+                            className="col-10 col-md-12"
                         ></input><br /><br />
                     </div>
                     <input type="button" value="Submit"

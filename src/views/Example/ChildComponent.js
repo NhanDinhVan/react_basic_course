@@ -31,26 +31,28 @@ class ChildComponent extends React.Component {
         let { isShow } = this.state
         console.log(">>> Check props: " + this.props)
         return <>
-            <div className="col-11 m-3">
-                <h3 className="my-3">
+            <div className="col-11 m-3 ">
+                <h3 className="my-3 col-12 d-flex justify-content-center flex-wrap">
                     <i className="m-3">Your class:</i>
                     <button onClick={() => this.onChangeHideShowState()}>Hide&Show</button>
                 </h3>
-                {
-                    classList.map((item, classList) => {
-                        return (
-                            <>
-                                {
-                                    isShow &&
-                                    <div className="text-primary" key={item.className}>
-                                        {item.className} - {item.teacherName}
-                                    </div>
-                                }
-                            </>
-                        )
-                    })
-                }
-            </div>
+                <div className="">
+                    {
+                        classList.map((item, classList) => {
+                            return (
+                                <>
+                                    {
+                                        isShow &&
+                                        <div className="text-primary my-3 col-12 d-flex justify-content-center flex-wrap" key={item.className}>
+                                            {item.className} - {item.teacherName}
+                                        </div>
+                                    }
+                                </>
+                            )
+                        })
+                    }
+                </div >
+            </div >
         </>
     }
 }

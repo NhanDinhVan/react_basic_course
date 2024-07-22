@@ -27,14 +27,11 @@ class ChildComponent extends React.Component {
     render() {
         // let name = this.props.name
         // let age = this.props.age
-        const { firstName, lastName, classList } = this.props;
+        const { classList } = this.props;
         let { isShow } = this.state
         console.log(">>> Check props: " + this.props)
         return <>
-            <div className="my-3 ">
-                <h3><i className="m-3">Full Name: </i><i className="text-primary">{firstName + " " + lastName}</i></h3>
-            </div>
-            <div>
+            <div className="col-11 m-3">
                 <h3 className="my-3">
                     <i className="m-3">Your class:</i>
                     <button onClick={() => this.onChangeHideShowState()}>Hide&Show</button>
@@ -49,7 +46,6 @@ class ChildComponent extends React.Component {
                                         {item.className} - {item.teacherName}
                                     </div>
                                 }
-
                             </>
                         )
                     })

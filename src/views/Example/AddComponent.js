@@ -16,14 +16,28 @@ class AddComponent extends React.Component {
     }
     onClickMe = (event) => {
         event.preventDefault()
-        alert(" Class name: " + this.state.className + "\n Teacher name: " + this.state.teacherName)
+        if (!this.state.className || !this.state.teacherName) {
+            alert("You must fill in the form !")
+            return
+        }
+        this.props.addNewClass(
+            {
+                className: this.state.className,
+                teacherName: this.state.teacherName
+            }
+        )
+        this.setState({
+            className: '',
+            teacherName: ''
+        }
+        )
     }
     render() {
         return (
             <div className="col-12 p-5">
                 <form className="d-flex justify-content-center flex-wrap col-12">
                     <div className="col-6 col-md-5">
-                        <label>First name:</label><br />
+                        <label>Class name:</label><br />
                         <input type="text"
                             value={this.state.className}
                             onChange={(event) => this.onChangeClassName(event)}
@@ -31,7 +45,7 @@ class AddComponent extends React.Component {
                         ></input><br />
                     </div>
                     <div className="col-6 col-md-5">
-                        <label>Last name:</label><br />
+                        <label>Teacher name:</label><br />
                         <input type="text"
                             value={this.state.teacherName}
                             onChange={(event) => this.onChangeTeacherName(event)}

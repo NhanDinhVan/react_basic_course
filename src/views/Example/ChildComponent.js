@@ -2,7 +2,7 @@ import React from "react";
 
 class ChildComponent extends React.Component {
     state = {
-        isShow: false
+        isShow: true
     }
     onChangeHideShowState = (state) => {
         this.setState({
